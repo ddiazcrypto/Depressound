@@ -1,0 +1,428 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from inebur.com/antler/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Feb 2022 05:13:04 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Antler - Hosting Provider & WHMCS Template</title>
+    <meta name="description" content="">
+    <link href="{%  static 'img/favicon.ico'%}" rel="shortcut icon">
+    <!-- Fonts -->
+    <link href="{%  static 'fonts/cloudicon/cloudicon.css'%}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{%  static 'fonts/fontawesome/css/all.css'%}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <!-- RTL STYLES-->
+    <link href="{%  static 'css/rtl/bootstrap-rtl.min.css'%}" disabled="true" rel="stylesheet" class="rtl">
+    <link href="{%  static 'css/rtl/style-rtl.min.css'%}" disabled="true" rel="stylesheet" class="rtl">
+    <!-- CSS Styles -->
+    <link href= "{%  static 'css/bootstrap.min.css'%}" rel="stylesheet" class="ltr" onload="if(media!='all')media='all'">
+    <link href="{%  static 'css/owl.carousel.min.css'%}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{%  static 'css/swiper.min.css'%}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{%  static 'css/animate.min.css'%}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{%  static 'css/style.min.css'%}" rel="stylesheet">
+    <link href="{%  static 'css/custom.css'%}" rel="stylesheet">
+  </head>
+
+  <body >
+  <div class="box-container limit-width">
+    <!-- ***** SETTINGS ****** -->
+    <section id="settings"> </section>
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Antler...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <!-- ***** HEADER ***** -->
+    <header class="p-3 bg-dark text-white">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+  
+          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
+          </ul>
+  
+          <div class="text-end">
+            <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Login</a>
+            <a href="{% url 'register' %}" class="btn btn-warning">Sign-up</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ***** SLIDER ***** -->
+    <section id="owl-demo" class="owl-carousel owl-theme owl-loaded owl-drag slider-02 scrollme">
+      <div class="full h-100 sec-bg6 bg-colorstyle">
+        <div class="vc-parent">
+          <div class="vc-child">
+            <div class="top-banner">
+              <div class="container pe-5">
+                <img class="svg custom-element-right" src="{%  static 'patterns/ddoslayers.svg'%}" alt="DDos Monitoring">
+                <div class="wow animated fadeInUp fast col-sm-12 col-md-5">
+                  <div class="heading mergecolor">DDoS <br><span id="typed2"></span> <br>Websites</div>
+                  <h3 class="subheading text-break seccolor">RAUL CHUPAPINGA <strong class="c-pink">$19.99/year</strong><br>
+                  </h3>
+                  <a href="ddos.html" class="btn btn-default-yellow-fill me-2 mb-2">Get Prices</a>
+                  <a href="ddos.html" class="btn btn-default-pink-fill mb-2">Learn more</a>
+                </div>
+              </div>
+              <div class="owl-dots"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="full h-100 sec-bg6 bg-colorstyle">
+        <div class="vc-parent">
+          <div class="vc-child">
+            <div class="top-banner">
+              <div class="container pe-5">
+                <img class="svg custom-element-right" src="{%  static 'patterns/api.svg'%}" alt="Dedicated Server">
+                <div class="col-sm-12 col-md-6">
+                  <div class="heading mergecolor">Dedicated <br>Server with <br> <span id="typed1"></span></div>
+                  <h3 class="subheading text-break seccolor">Powerful servers with high-end resources that will guarantee resource exclusivity, starting at just <strong class="c-pink">$90.22/mo</strong><br>
+                  </h3>
+                </div>
+                <a href="dedicated.html" class="btn btn-default-yellow-fill me-2 mb-2">Get Prices</a>
+                <a href="dedicated.html" class="btn btn-default-pink-fill mb-2">Learn more</a>
+              </div>
+              <div class="owl-dots"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="full h-100 sec-bg6 bg-colorstyle">
+        <div class="vc-parent">
+          <div class="vc-child">
+            <div class="top-banner">
+              <div class="container pe-5">
+                <img class="svg custom-element-right" src="{%  static 'patterns/cloudvps.svg'%}" alt="Cloud VPS Server">
+                <div class="col-sm-12 col-md-6">
+                  <h1 class="heading mergecolor">Virtual <br>Cloud <br>Servers</h1>
+                  <h3 class="subheading seccolor">
+                    <i class="c-pink feat fas fa-check-circle me-2"></i> Immediate scalability<br>
+                    <i class="c-pink feat fas fa-check-circle me-2"></i> High performance<br>
+                    <i class="c-pink feat fas fa-check-circle me-2"></i> Fast deployment
+                  </h3>
+                </div>
+                <a href="vps.html" class="btn btn-default-yellow-fill me-2 mb-2">Get Prices</a>
+                <a href="vps.html" class="btn btn-default-pink-fill mb-2">Learn more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <img class="blobleft svg d-none" src="{%  static 'img/background/blob.svg'%}" alt="Blob Background">
+    <!-- ***** PRICING TABLES ***** -->
+    <section class="pricing special sec-bg2 bg-colorstyle specialposition">
+      <div class="container">
+        <div class="sec-up-slider nopadding">
+          <div class="row">
+            <div class="col-md-12 col-lg-4">
+              <div class="wrapper first noshadow">
+                <div class="top-content bg-seccolorstyle topradius">
+                  <img class="svg mb-3" src="{%  static 'fonts/svg/cloudfiber.svg'%}" alt="">
+                  <div class="title">Shared Hosting</div>
+                  <div class="fromer seccolor">Starting at:</div>
+                  <div class="price seccolor"><sup>$</sup>8.19 <span class="period">/month</span></div>
+                  <a href="hosting.html" class="btn btn-default-yellow-fill">All plans</a>
+                </div>
+                <ul class="list-info">
+                  <li><i class="icon-drives"></i> <span class="c-purple">DISK</span><br> <span>250GB SSD</span></li>
+                  <li><i class="icon-speed"></i> <span class="c-purple">DATA</span><br> <span>1TB Bandwidth</span></li>
+                  <li><i class="icon-emailopen"></i> <span class="c-purple">EMAIL</span><br> <span>120 Emails</span></li>
+                  <li><i class="icon-domains"></i> <span class="c-purple">TLD</span><br> <span>30 Domains</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+              <div class="wrapper noshadow">
+                <div class="plans badge feat bg-pink">recommended</div>
+                <div class="top-content bg-seccolorstyle topradius">
+                  <img class="svg mb-3" src="{%  static 'fonts/svg/dedicated.svg'%}" alt="">
+                  <div class="title">Dedicated Server</div>
+                  <div class="fromer seccolor">annually get (20% discount)</div>
+                  <div class="price seccolor"><sup>$</sup>82.00 <span class="period">/month</span></div>
+                  <a href="configurator.html" class="btn btn-default-yellow-fill">Configure</a>
+                </div>
+                <ul class="list-info bg-purple">
+                  <li><i class="icon-cpu"></i> <span class="c-pink">CPU</span><br> <span>4x 3.20Ghz 2 Cores</span></li>
+                  <li><i class="icon-ram"></i> <span class="c-pink">RAM</span><br> <span>16GB (up to 32GB)</span></li>
+                  <li><i class="icon-drivessd"></i> <span class="c-pink">DRIVES</span><br> <span>2 x 1TB SATA 3.5</span></li>
+                  <li><i class="icon-git"></i> <span class="c-pink">UPLINK</span><br> <span>1Gbps - 20TB</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4">
+              <div class="wrapper third noshadow">
+                <div class="top-content bg-seccolorstyle topradius">
+                  <img class="svg mb-3" src="{%  static 'fonts/svg/vps.svg'%}" alt="">
+                  <div class="title">Cloud VPS</div>
+                  <div class="fromer seccolor">Starting at:</div>
+                  <div class="price seccolor"><sup>$</sup>9.99 <span class="period">/month</span></div>
+                  <a href="vps.html" class="btn btn-default-yellow-fill">All plans</a>
+                </div>
+                <ul class="list-info">
+                  <li><i class="icon-cpu"></i> <span class="c-purple">CPU</span><br> <span>2 Cores</span></li>
+                  <li><i class="icon-ram"></i> <span class="c-purple">RAM</span><br> <span>2GB Memory</span></li>
+                  <li><i class="icon-drives"></i> <span class="c-purple">DISK</span><br> <span>20GB SSD Space</span></li>
+                  <li><i class="icon-speed"></i> <span class="c-purple">DATA</span><br> <span>1TB Bandwidth</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** LOAD BALANCING ***** -->
+    <section class="balancing sec-normal bg-colorstyle">
+      <div class="h-services">
+        <div class="container">
+          <div class="randomline">
+            <div class="bigline"></div>
+            <div class="smallline"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <h2 class="section-heading whitecolor mergecolor">Cloud Load Balancing</h2>
+              <p class="section-subheading whitecolor mergecolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="col-md-12">
+              <div class="wrap-service load">
+                <div class="wow animated fadeInUp fast">
+                  <img class="svg mt-50 w-100 ltr-img d-block" src="{%  static 'patterns/balancing.svg'%}" alt="Load Balancing">
+                  <img class="svg mt-50 w-100 rtl-img d-none" src="{%  static 'patterns/balancing-rtl.svg'%}" alt="Load Balancing">
+                </div>
+                <div class="row text-info text-center">
+                  <div class="col-md-4 pb-2 pt-5"><b class="c-purple">[1] Users</b> <br>
+                    <span class="info seccolor">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</span>
+                  </div>
+                  <div class="col-md-4 pb-2 pt-5"><b class="c-purple">[2] Load Balancing</b> <br>
+                    <span class="info seccolor">Eaque ipsa quae ab illo inventore veritatis et quasi. Eaque ipsa quae omnis iste</span>
+                  </div>
+                  <div class="col-md-4 pb-2 pt-5"><b class="c-purple">[3] Cloud Servers</b> <br>
+                    <span class="info seccolor">Omnis iste natus error sit voluptatem accusantium doloremque laudantium.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <svg class="division-ontop bg-white d-none" viewBox="0 0 1440 150">
+      <path fill="#fdd700" fill-opacity="1" d="M0,96L120,85.3C240,75,480,53,720,53.3C960,53,1200,75,1320,85.3L1440,96L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+      </path>
+    </svg>
+
+    <!-- ***** FEATURES ***** -->
+    <section class="services sec-normal sec-bg4">
+      <div class="container">
+        <div class="service-wrap">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h2 class="section-heading">Why Choose Antler?</h2>
+              <p class="section-subheading">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
+            </div>
+            <div class="col-md-12 col-lg-4 wow animated fadeInUp fast">
+              <div class="service-section bg-colorstyle noshadow">
+                <div class="plans badge feat bg-pink">Premium</div>
+                <img class="svg" src="{%  static 'fonts/svg/helpdesk.svg'%}" alt="">
+                <div class="title mergecolor">Support 24x7x365</div>
+                <p class="subtitle seccolor">
+                  Excepteur sint occaecat cupidatat non proident voluptate
+                </p>
+                <a href="#" class="btn btn-default-yellow-fill">Read more</a>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4 wow animated fadeInUp">
+              <div class="service-section bg-colorstyle noshadow">
+                <div class="plans badge feat bg-pink">Control Panel</div>
+                <img class="svg" src="{%  static 'fonts/svg/window.svg'%}" alt="">
+                <div class="title mergecolor">Free WHM &amp; cPanel</div>
+                <p class="subtitle seccolor">
+                  Excepteur sint occaecat cupidatat non proident dolor
+                </p>
+                <a href="#" class="btn btn-default-yellow-fill">Read more</a>
+              </div>
+            </div>
+            <div class="col-md-12 col-lg-4 wow animated fadeInUp fast">
+              <div class="service-section bg-colorstyle noshadow">
+                <img class="svg" src="{%  static 'fonts/svg/cloudmanaged.svg'%}" alt="">
+                <div class="title mergecolor">Perfomance Optimized</div>
+                <p class="subtitle seccolor">
+                  Excepteur sint occaecat cupidatat non proident voluptate
+                </p>
+                <a href="#" class="btn btn-default-yellow-fill">Read more</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** MAP ***** -->
+    <section class="services maping sec-normal sec-grad-grey-to-grey bg-colorstyle bottompadding">
+      <div class="container">
+        <div class="service-wrap">
+          <div class="row">
+            <div class="col-sm-12 text-center">
+              <h2 class="section-heading text-white mergecolor">Our Datacenters are Located in 7 Regions</h2>
+              <p class="section-subheading text-muted mergecolor"><span class="golink">Lorem ipsum dolor</span> sit amet, consectetur adipiscing elit sed, do eiusmod tempor  <span class="c-pink">incididunt lorem ipsum</span> dolor sit amet</p>
+            </div>
+            <div class="col-md-12 pt-5 scrollme position-relative">
+              <img src="{%  static 'patterns/map.svg'%}" class="lazyload w-10 animateme" alt="Load Balancing" data-when="view" data-from="1" data-to="0" data-opacity="0">
+              <span class="datacenters montreal" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Montreal" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."></span>
+              <span class="datacenters newyork" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="New York" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." ></span>
+              <span class="datacenters portugal"  data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Portugal" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."></span>
+              <span class="datacenters london" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="London" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."></span>
+              <span class="datacenters moskow" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Moskow"  data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."></span>
+              <span class="datacenters hongkong" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Hong Kong" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."></span>
+              <span class="datacenters singapure" data-bs-toggle="popover" data-bs-container="body" data-bs-trigger="hover" data-bs-placement="top" title="Singapure" data-bs-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus."></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** CASE STUDY ***** -->
+    <section class="casestudy sec-bg2 bg-colorstyle">
+      <div class="container">
+        <div class="sec-main sec-up bg-purple mb-0 nomargin">
+          <img class="lazyload ltr-img d-block" src="{%  static 'img/casestudy.png'%}" data-src="{%  static 'img/casestudy.png'%}" alt="Case Study">
+          <img class="lazyload rtl-img d-none" src="{%  static 'img/casestudy-rtl.png'%}" data-src="{%  static 'img/casestudy-rtl.png'%}" alt="Case Study">
+          <div class="plans badge feat bg-dark">case study</div>
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-9">
+              <div class="slider-container slider-filter">
+                <div class="slider-wrap">
+                  <div class="swiper-container main-slider" data-autoplay="4000" data-touch="1" data-mouse="0" data-slides-per-view="responsive" data-loop="1" data-speed="1200" data-mode="horizontal" data-xs-slides="1" data-sm-slides="1" data-md-slides="1" data-lg-slides="1">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <h3 class="author">Everth Group</h3>
+                        <div class="content-info">
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totamer rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi.</p>
+                          <div class="mb-3"> Michael Jones - Executive Director</div>
+                          <a href="casestudy/casestudy-everthgroup.pdf" class="btn btn-default-yellow-fill mb-2">Case Study Download</a>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <h3 class="author">Growtop Company</h3>
+                        <div class="content-info">
+                          <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totamer rem aperiam, eaque ipsa quae ab illo inventore.</p>
+                          <div class="mb-3"> Matt Radford - President &amp; Managing Director</div>
+                          <a href="casestudy/casestudy-growtop.pdf" class="btn btn-default-yellow-fill mb-2">Case Study Download</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="pagination vertical-mode pagination-index"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** HELP ***** -->
+    <section class="services help sec-bg2 pt-4 pb-80 bg-colorstyle">
+      <div class="container">
+        <div class="service-wrap">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="help-container bg-seccolorstyle noshadow">
+                <a href="javascript:void(Tawk_API.toggle())" class="help-item">
+                  <div class="img">
+                    <img class="svg ico" src="{%  static 'fonts/svg/livechat.svg'%}" height="65" alt="">
+                  </div>
+                  <div class="inform">
+                    <div class="title mergecolor">Live Chat</div>
+                    <div class="description seccolor">Lorem Ipsum is simply dummy text printing.</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="help-container bg-seccolorstyle noshadow">
+                <a href="contact.html" class="help-item">
+                  <div class="img">
+                    <img class="svg ico" src="{%  static 'fonts/svg/emailopen.svg'%}" height="65" alt="">
+                  </div>
+                  <div class="inform">
+                    <div class="title mergecolor">Send Ticket</div>
+                    <div class="description seccolor">Lorem Ipsum is simply dummy text printing.</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="help-container bg-seccolorstyle noshadow">
+                <a href="404.html" class="help-item">
+                  <div class="img">
+                    <img class="svg ico" src="{%  static 'fonts/svg/book.svg'%}" height="65" alt="">
+                  </div>
+                  <div class="inform">
+                    <div class="title mergecolor">Knowledge base</div>
+                    <div class="description seccolor">Lorem Ipsum is simply dummy text printing.</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** UPLOADED FOOTER FROM FOOTER.HTML ***** -->
+    <footer id="footer"> </footer>
+  </div>
+<!-- ***** BUTTON GO TOP ***** -->
+<a href="#0" class="cd-top"> <i class="fas fa-angle-up"></i> </a>
+<!-- Javascript -->
+<script src="{%  static 'js/jquery.min.js'%}"></script>
+<script src="{%  static 'js/typed.js'%}"></script>
+<script defer src="{%  static 'js/popper.min.js'%}"></script>
+<script defer src="{%  static 'js/bootstrap.min.js'%}"></script>
+<script defer src="{%  static 'js/jquery.countdown.js'%}"></script>
+<script defer src="{%  static 'js/jquery.magnific-popup.min.js'%}"></script>
+<script defer src="{%  static 'js/slick.min.js'%}"></script>
+<script defer src="{%  static 'js/owl.carousel.min.js'%}"></script>
+<script defer src="{%  static 'js/isotope.min.js'%}"></script>
+<script defer src="{%  static 'js/jquery.scrollme.min.js'%}"></script>
+<script defer src="{%  static 'js/swiper.min.js'%}"></script>
+<script async src="{%  static 'js/lazysizes.min.js'%}"></script>
+<script src="{%  static 'js/wow.min.js'%}"></script>
+<script>new WOW().init();</script>
+<script defer src="{%  static 'js/scripts.js'%}"></script>
+<script defer src="{%  static 'js/settings-init.js'%}"></script>
+<script>
+var typed1 = new Typed('#typed1', {
+  strings: ["performance", "flexibility", "scalability."],
+  typeSpeed: 50,
+  backSpeed: 20,
+  smartBackspace: true,
+  loop: true
+});
+var typed1 = new Typed('#typed2', {
+  strings: ["Protection", "Sophisticated", "Flexibility"],
+  typeSpeed: 100,
+  backSpeed: 50,
+  smartBackspace: true,
+  loop: true
+});
+</script>
+</body>
+
+<!-- Mirrored from inebur.com/antler/template/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Feb 2022 05:14:42 GMT -->
+</html>
