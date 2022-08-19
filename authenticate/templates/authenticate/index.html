@@ -24,7 +24,11 @@
     <link href="{%  static 'css/style.min.css'%}" rel="stylesheet">
     <link href="{%  static 'css/custom.css'%}" rel="stylesheet">
   </head>
-
+  <style>
+    .imagen-fondo {
+      background-image: url("{% static 'patterns/fondo.jpg' %}");
+    }
+  </style>
   <body >
   <div class="box-container limit-width">
     <!-- ***** SETTINGS ****** -->
@@ -64,16 +68,15 @@
       </div>
     </header>
     <!-- ***** SLIDER ***** -->
-    <section id="owl-demo" class="owl-carousel owl-theme owl-loaded owl-drag slider-02 scrollme">
-      <div class="full h-100 sec-bg6 bg-colorstyle">
+      <div class="full vh-100 sec-bg6 imagen-fondo">
         <div class="vc-parent">
           <div class="vc-child">
             <div class="top-banner">
               <div class="container pe-5">
                 <img class="svg custom-element-right" src="{%  static 'patterns/ddoslayers.svg'%}" alt="DDos Monitoring">
                 <div class="wow animated fadeInUp fast col-sm-12 col-md-5">
-                  <div class="heading mergecolor">DDoS <br><span id="typed2"></span> <br>Websites</div>
-                  <h3 class="subheading text-break seccolor">RAUL CHUPAPINGA <strong class="c-pink">$19.99/year</strong><br>
+                  <div class="heading mergecolor">Depressound <br><span id="typed2"></span> <br>Website</div>
+                  <h3 class="subheading text-break seccolor">RAUL CHUPAPINGA <strong class="c-black">Beta Version</strong><br>
                   </h3>
                   <a href="ddos.html" class="btn btn-default-yellow-fill me-2 mb-2">Get Prices</a>
                   <a href="ddos.html" class="btn btn-default-pink-fill mb-2">Learn more</a>
@@ -84,47 +87,6 @@
           </div>
         </div>
       </div>
-      <div class="full h-100 sec-bg6 bg-colorstyle">
-        <div class="vc-parent">
-          <div class="vc-child">
-            <div class="top-banner">
-              <div class="container pe-5">
-                <img class="svg custom-element-right" src="{%  static 'patterns/api.svg'%}" alt="Dedicated Server">
-                <div class="col-sm-12 col-md-6">
-                  <div class="heading mergecolor">Dedicated <br>Server with <br> <span id="typed1"></span></div>
-                  <h3 class="subheading text-break seccolor">Powerful servers with high-end resources that will guarantee resource exclusivity, starting at just <strong class="c-pink">$90.22/mo</strong><br>
-                  </h3>
-                </div>
-                <a href="dedicated.html" class="btn btn-default-yellow-fill me-2 mb-2">Get Prices</a>
-                <a href="dedicated.html" class="btn btn-default-pink-fill mb-2">Learn more</a>
-              </div>
-              <div class="owl-dots"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="full h-100 sec-bg6 bg-colorstyle">
-        <div class="vc-parent">
-          <div class="vc-child">
-            <div class="top-banner">
-              <div class="container pe-5">
-                <img class="svg custom-element-right" src="{%  static 'patterns/cloudvps.svg'%}" alt="Cloud VPS Server">
-                <div class="col-sm-12 col-md-6">
-                  <h1 class="heading mergecolor">Virtual <br>Cloud <br>Servers</h1>
-                  <h3 class="subheading seccolor">
-                    <i class="c-pink feat fas fa-check-circle me-2"></i> Immediate scalability<br>
-                    <i class="c-pink feat fas fa-check-circle me-2"></i> High performance<br>
-                    <i class="c-pink feat fas fa-check-circle me-2"></i> Fast deployment
-                  </h3>
-                </div>
-                <a href="vps.html" class="btn btn-default-yellow-fill me-2 mb-2">Get Prices</a>
-                <a href="vps.html" class="btn btn-default-pink-fill mb-2">Learn more</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <img class="blobleft svg d-none" src="{%  static 'img/background/blob.svg'%}" alt="Blob Background">
     <!-- ***** PRICING TABLES ***** -->
     <section class="pricing special sec-bg2 bg-colorstyle specialposition">
@@ -407,15 +369,8 @@
 <script defer src="{%  static 'js/scripts.js'%}"></script>
 <script defer src="{%  static 'js/settings-init.js'%}"></script>
 <script>
-var typed1 = new Typed('#typed1', {
-  strings: ["performance", "flexibility", "scalability."],
-  typeSpeed: 50,
-  backSpeed: 20,
-  smartBackspace: true,
-  loop: true
-});
 var typed1 = new Typed('#typed2', {
-  strings: ["Protection", "Sophisticated", "Flexibility"],
+  strings: ["Diagnostico", "Seguimiento", "Confidencial"],
   typeSpeed: 100,
   backSpeed: 50,
   smartBackspace: true,

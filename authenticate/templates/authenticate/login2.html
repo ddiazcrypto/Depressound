@@ -1,0 +1,60 @@
+{% extends 'authenticate/base.html' %}
+
+{% block content %}
+  <div class="box-container limit-width">
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Antler...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <p id="nav-toggle"></p>
+    <!-- ***** FULL COUNTDOWN PAGE ***** -->
+    <div class="fullrock config sec-bg3 motpath bg-colorstyle">
+      <section class="fullrock-content">
+        <div class="container">
+          <a href="index-2.html"><img class="svg logo-menu d-block" src="img/logo.svg" alt="logo Antler"></a>
+          <a href="index-2.html"><img class="svg logo-menu d-none" src="img/logo-light.svg" alt="logo Antler"></a>
+          <div class="sec-main sec-bg1 tabs bg-seccolorstyle noshadow">
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="table tabs-item active">
+                  <div class="cd-filter-block mb-0">
+                    <h4 class="m-0 mergecolor">Existing Customer Login</h4>
+                    <div class="cd-filter-content">
+                      <form method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                          <div class="col-md-6 position-relative">
+                            <label><i class="fas fa-envelope"></i></label>
+                            <input type="text" name="username" placeholder="Enter usermane" required>
+                          </div>
+                          <div class="col-md-6 position-relative">
+                            <label><i class="fas fa-lock"></i></label>
+                            <input type="password" name="password" placeholder="Password" required>
+                          </div>
+                          <div class="col-md-12 mt-5 position-relative">
+                            <button type="submit" value="login" id="login" class="btn btn-default-yellow-fill mt-0 mb-3 me-3">Login <i class="fas fa-lock"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    </div>
+  {% endblock %}
