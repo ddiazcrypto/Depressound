@@ -1,25 +1,175 @@
-{% extends 'authenticate/base.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from inebur.com/antler/template/login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Feb 2022 14:54:57 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Antler - Hosting Provider & WHMCS Template</title>
+    <meta name="description" content="">
+    <link href="{%  static 'img/favicon.ico'%}" rel="shortcut icon">
+    <!-- Fonts -->
+    <link href="{%  static 'fonts/fontawesome/css/all.css'%}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <link href="{%  static 'fonts/cloudicon/cloudicon.css'%}" rel="stylesheet" onload="if(media!='all')media='all'">
+    <!-- RTL STYLES-->
+    <link href="{%  static 'css/rtl/bootstrap-rtl.min.css'%}" disabled="true" rel="stylesheet" class="rtl">
+    <link href="{%  static 'css/rtl/style-rtl.min.css'%}" disabled="true" rel="stylesheet" class="rtl">
+    <!-- CSS styles -->
+    <link href="{%  static 'css/bootstrap.min.css'%}" rel="stylesheet" class="ltr" onload="if(media!='all')media='all'">
+    <link href="{%  static 'css/filter.css'%}" rel="stylesheet">
+    <link href="{%  static 'css/style.min.css'%}" rel="stylesheet">
+    <link href="{%  static 'css/custom.css'%}" rel="stylesheet">
+  </head>
 
-{% block content %}
+  <style>
+    .imagen-fondo {
+      background-image: url("{% static 'patterns/fondo.jpg' %}")!important;
+    }
+  </style>
 
-<h2 class="text-center">Login</h2>
 
-<div class="col-md-6 offset-md-3">
-	<form method="POST">
-		{% csrf_token %}
-	  <div class="form-group">
-	  		    
-	    <input type="text" class="form-control"  placeholder="Enter Username" name="username">
-	    
-	  </div>
-	  <div class="form-group">
-	    
-	    <input type="password" class="form-control"  placeholder="Enter Password" name="password">
-	  </div>
-	  
-	  <button type="submit" class="btn btn-secondary">Login</button>
-	</form>
+  <body >
+  <div class="box-container limit-width">
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Antler...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <p id="nav-toggle"></p>
+    <!-- ***** FULL COUNTDOWN PAGE ***** -->
+    <div class="fullrock config sec-bg3 motpath imagen-fondo">
+      <a onclick="window.history.go(-1); return false;" class="closebtn">
+        <img class="svg closer bg-transparent" src="{%  static 'fonts/svg/close.svg'%}" alt="">
+      </a>
+      <section class="fullrock-content">
+        <div class="container">
+          <!--<a href="{%  static 'index-2.html'%}"><img class="svg logo-menu d-block" src="{%  static 'img/logo.svg'%}" alt="logo Antler"></a>-->
+          <!--<a href="{%  static 'index-2.html'%}"><img class="svg logo-menu d-none" src="{%  static 'img/logo-light.svg'%}" alt="logo Antler"></a>-->
+          <div class="sec-main sec-bg1 tabs bg-seccolorstyle noshadow">
+            <div class="randomline">
+              <div class="bigline"></div>
+              <div class="smallline"></div>
+            </div>
+            <h2 class="mergecolor"><b>Login or Create a New Account</b></h2>
+            <p class="mb-5 mergecolor">If you are a returning customer, please Login if not, create a new account.</p>
+            <div class="tabs-header btn-select-customer">
+              <ul class="btn-group d-block">
+                <li class="btn btn-secondary active mb-2">Te encuentras registrado?</li>
+                <li class="btn btn-secondary">Create a New Account</li>
+              </ul>
+            </div>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="table tabs-item active">
+                  <div class="cd-filter-block mb-0">
+                    <h4 class="m-0 mergecolor">Existing Customer Login</h4>
+                    <div class="cd-filter-content">
+                      <form method="POST">
+                          {% csrf_token %}
+                        <div class="row">
+                          <div class="col-md-6 position-relative">
+                            <label><i class="fas fa-envelope"></i></label>
 
-</div>
+                            <!--<input type="email" name="username" placeholder="Enter email" required>-->
+                            <input type="text" name="username" placeholder="Enter Username" class="form-control">
+                          </div>
+                          <div class="col-md-6 position-relative">
+                            <label><i class="fas fa-lock"></i></label>
+                            <!--<input type="password" name="password" placeholder="Password" required>-->
+                            <input type="password" class="form-control"  placeholder="Enter Password" name="password">
+                          </div>
+                          <div class="col-md-12 mt-5 position-relative">
+                            <button type="submit" value="login" id="login" class="btn btn-default-yellow-fill mt-0 mb-3 me-3">Login <i class="fas fa-lock"></i>
+                            </button>
+                            
+                            <!--<button type="submit" class="btn btn-secondary">Login</button>-->
+                            <a class="golink me-3 position-relative">Forgot Password?</a>
+                            <ul class="list d-inline">
+                              <li>
+                                <input name="rememberme" type="checkbox" id="checkbox" class="filter">
+                                <label for="checkbox" class="checkbox-label c-grey seccolor" >Remember Me</label>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <div class="table tabs-item">
+                  <div class="cd-filter-block mb-0">
+                    <h4 class="mergecolor">Sign Up</h4>
+                    <div class="cd-filter-content">
+                      <form action="http://inebur.com/whmcs/register.php/?systpl=antler" method="post" name="orderfrm" class="comments-form">
+                        <div class="seccolor"><small>Personal Information</small></div>
+                        <div class="row mb-5">
+                          <div class="col-md-6 position-relative">
+                            <label for="firstname"><i class="fas fa-user-tie"></i></label>
+                            <input type="text" name="firstname" id="firstname" placeholder="First Name" required>
+                          </div>
+                          <div class="col-md-6 position-relative">
+                            <label for="inputLastName"><i class="fas fa-user-tie"></i></label>
+                            <input type="text" name="lastname" id="inputLastName" placeholder="Last Name" required>
+                          </div>
+                          <div class="col-md-6 position-relative">
+                            <label for="inputEmail"><i class="fas fa-envelope"></i></label>
+                            <input type="email" name="email" id="inputEmail" placeholder="Email Address" required>
+                          </div>
+                          <div class="col-md-6 position-relative">
+                            <label for="inputLastName"><i class="fas fa-user-tie"></i></label>
+                            <input type="text" name="lastname" id="inputLastName" placeholder="User Name" required>
+                          </div>
+                        </div>
+                        
+                          <div class="mergecolor"><small>Account Security</small></div>
+                          <div class="row mb-5">
+                            <div class="col-md-6 position-relative">
+                              <label for="inputNewPassword1"><i class="fas fa-lock"></i></label>
+                              <input type="password" name="password" id="inputNewPassword1" placeholder="Password">
+                            </div>
+                            <div class="col-md-6 position-relative">
+                              <label for="inputNewPassword2"><i class="fas fa-lock"></i></label>
+                              <input type="password" name="password2" id="inputNewPassword2" placeholder="Confirm Password" value="">
+                            </div>
+                          </div>
+                          
+                          <button type="submit" value="Submit" class="btn btn-default-yellow-fill mb-1 disable-on-click spinner-on-click ">Register</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- Javascript -->
+    <script src="{%  static 'js/jquery.min.js'%}"></script>
+    <script defer src="{%  static 'js/bootstrap.min.js'%}"></script>
+    <script defer src="{%  static 'js/jquery.countdown.js'%}"></script>
+    <script defer src="{%  static 'js/jquery.magnific-popup.min.js'%}"></script>
+    <script defer src="{%  static 'js/slick.min.js'%}"></script>
+    <script defer src="{%  static 'js/owl.carousel.min.js'%}"></script>
+    <script defer src="{%  static 'js/isotope.min.js'%}"></script>
+    <script defer src="{%  static 'js/filter.js'%}"></script>
+    <script defer src="{%  static 'js/swiper.min.js'%}"></script>
+    <script defer src="{%  static 'js/scripts.min.js'%}"></script>
+    <script defer src="{%  static 'js/settings-init.js'%}"></script>
+  </body>
 
-{% endblock %}
+<!-- Mirrored from inebur.com/antler/template/login by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 25 Feb 2022 14:54:58 GMT -->
+</html>
