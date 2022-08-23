@@ -27,6 +27,30 @@
     .imagen-fondo {
       background-image: url("{% static 'patterns/fondo.jpg' %}")!important;
     }
+    .btn-group {
+      height: 59px;
+      margin-bottom: 16px;
+    }
+    .btn-group-item {
+      background-color: #ee5586 !important;
+      font-size: 14px;
+      height: 51px;
+      color: #fff !important;
+      border: none;
+      border-radius: 50px !important;
+      padding: 15px 25px !important;
+      box-shadow: 0 2px 8px 0 rgba(62,62,79,.23);
+    }
+
+    .btn-group-item-inactive {
+      background-color: #4c4a4a;
+      font-size: 14px;
+      color: #fff !important;
+      border: none;
+      border-radius: 50px;
+      padding: 15px 25px;
+      box-shadow: 0 2px 8px 0 rgba(62,62,79,.23);
+    }
   </style>
 
 
@@ -50,7 +74,7 @@
     <p id="nav-toggle"></p>
     <!-- ***** FULL COUNTDOWN PAGE ***** -->
     <div class="fullrock config sec-bg3 motpath imagen-fondo">
-      <a onclick="window.history.go(-1); return false;" class="closebtn">
+      <a href="{% url 'home' %}" class="closebtn">
         <img class="svg closer bg-transparent" src="{%  static 'fonts/svg/close.svg'%}" alt="">
       </a>
       <section class="fullrock-content">
@@ -64,11 +88,9 @@
             </div>
             <h2 class="mergecolor"><b>Login or Create a New Account</b></h2>
             <p class="mb-5 mergecolor">If you are a returning customer, please Login if not, create a new account.</p>
-            <div class="tabs-header btn-select-customer">
-              <ul class="btn-group d-block">
-                <li class="btn btn-secondary active mb-2">Te encuentras registrado?</li>
-                <li class="btn btn-secondary">Create a New Account</li>
-              </ul>
+            <div class="btn-group d-block">
+              <a class="btn-group-item active mb-2">Te encuentras registrado?</a>
+              <a class="btn-group-item-inactive" href="{% url 'register' %}">Registrate</a>
             </div>
             <div class="row">
               <div class="col-sm-12">
