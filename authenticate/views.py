@@ -7,6 +7,10 @@ from .forms import SignUpForm, EditProfileForm
 def home(request):
 	return render(request, 'authenticate/index.html', {})
 
+def login_page(request):
+	return render(request, 'authenticate/login_page.html', {})
+
+
 def login_user(request):
 	if request.method == 'POST':
 		username = request.POST['username']
@@ -15,7 +19,7 @@ def login_user(request):
 		if user is not None:
 			login(request, user)
 			messages.success(request, ('You Have Been Logged In!'))
-			return redirect('home')
+			return redirect('login_page')
 
 		else:
 			messages.success(request, ('Error Logging In - Please Try Again...'))
@@ -53,7 +57,7 @@ def edit_profile(request):
 		if form.is_valid():
 			form.save()
 			messages.success(request, ('You Have Edited Your Profile...'))
-			return redirect('home')
+			return redirect('login_page')
 	else:
 		form = EditProfileForm(instance=request.user)
 	
@@ -67,7 +71,7 @@ def change_password(request):
 			form.save()
 			update_session_auth_hash(request, form.user)
 			messages.success(request, ('You Have Edited Your Password...'))
-			return redirect('home')
+			return redirect('login_page')
 	else:
 		form = PasswordChangeForm(user=request.user)
 	
