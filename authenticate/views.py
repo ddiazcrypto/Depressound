@@ -4,6 +4,8 @@ from django.contrib.auth.forms import UserCreationForm, UserChangeForm, Password
 from django.contrib import messages 
 from .forms import SignUpForm, EditProfileForm
 
+from django.http import HttpResponse
+
 def home(request):
 	return render(request, 'authenticate/index.html', {})
 
@@ -78,3 +80,6 @@ def change_password(request):
 	context = {'form': form}
 	return render(request, 'authenticate/change_password.html', context)
 
+def prueba_grabacion(request):
+	print ("\nEstoy intentado grabar\n")
+	return HttpResponse("""<html><script>windows.location.replace('/');</script></html>""")
